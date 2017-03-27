@@ -17,10 +17,10 @@ Example launch :
 
 
 ## Requirements
-Python
-OpenCV
-Keras and its dependencies (theano/tensorflow)
-Scikit-image
+- Python
+- OpenCV
+- Keras and its dependencies (theano/tensorflow)
+- Scikit-image
 
 ## Contributors 
 Pascal Jauffret, Maxence Brochard
