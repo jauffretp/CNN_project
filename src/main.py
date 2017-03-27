@@ -8,16 +8,10 @@ Created on Tue Nov 29 12:13:17 2016
 
 
 import sys, argparse,glob
-import skimage.io as io
-import matplotlib.pyplot as plt
 import numpy as np
-import math
-from matplotlib.patches import Ellipse, Circle
-
 from resnet50 import ResNet50
 from keras.preprocessing import image
 from imagenet_utils import preprocess_input, decode_predictions
-
 import cv2
 
 
@@ -26,10 +20,8 @@ import cv2
 Execute main script
 
 Exemple of execution :
-python3 main.py --source "sequence1"
-
-with fulldisplay :
-python3 main.py --source "sequence1" --fulldisplay
+python3 main.py --source webcam
+python3 main.py --source "random"
 
 """
 
