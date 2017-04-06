@@ -12,6 +12,8 @@ import numpy as np
 from resnet50 import ResNet50
 from keras.preprocessing import image
 from imagenet_utils import preprocess_input, decode_predictions
+from keras.models import model_from_json
+
 import cv2
 
 
@@ -35,7 +37,8 @@ def main(argv):
 	model = ResNet50(weights='imagenet')
 
 
-	
+	face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
 
 	
 
@@ -93,14 +96,18 @@ def main(argv):
 			#print("\n")
 
 			#print(preds[0])
+			gray = cv2.cvtColor(array_picture_bgr, cv2.COLOR_BGR2GRAY)
+			faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 
-			display_picture(array_picture_bgr, preds)
+
+
+			display_picture(array_picture_bgr, preds, faces)
 
 			key = cv2.waitKey(1)
 			
 
 
-def  display_picture(array_picture_bgr, preds):
+def  display_picture(array_picture_bgr, preds, faces):
 	format_string = [pred[1] + " : " + str(pred[2]) for pred in preds[0]]
 
 	y_ini = 30
@@ -109,6 +116,8 @@ def  display_picture(array_picture_bgr, preds):
 		y = y_ini + y_offset*idx
 		cv2.putText(array_picture_bgr, format_string[idx], (10, y), cv2.FONT_HERSHEY_TRIPLEX, 0.8, (0, 0, 0), 2)
 	
+	for (x,y,w,h) in faces:
+		cv2.rectangle(array_picture_bgr,(x,y),(x+w,y+h),(255,0,0),2)
 
 	cv2.imshow('CNN Detection',array_picture_bgr)
 
