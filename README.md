@@ -1,6 +1,8 @@
 Python project on using CNN with image processing
 ============
 
+![Style transfer example](https://raw.githubusercontent.com/jauffretp/CNN_project/master/notebooks/img/chien_multicolor.jpg)
+
 
 
 ## Idea
@@ -9,7 +11,7 @@ Create something useful and fun with deep learning and image processing
 ## How to use
 
 # Object detection
-In the python folder :
+In the `python` folder :
 - Launch the `object_detection.py` script file
 - To use the webcam use the `--source webcam` option
 - To try it on the pictures from  `data/random` use the `--source random` option
@@ -20,12 +22,11 @@ Example launch :
 
 # Key facepoint detection
 
-In the python folder :
+In the `python` folder :
 - Launch the `keypoint_detection.py` script file
 
-Example launch :
-- `python3 keypoint_detection.py --source webcam`
-
+# Style transfer an training of the CNNs
+Explore the notebook folder
 
 ## Requirements
 - Python
