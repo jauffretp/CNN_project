@@ -7,19 +7,30 @@ Python project on using CNN with image processing
 Create something useful and fun with deep learning and image processing
 
 ## How to use
-- Launch the `main.py` script file from `src`
+
+# Object detection
+In the python folder :
+- Launch the `object_detection.py` script file
 - To use the webcam use the `--source webcam` option
 - To try it on the pictures from  `data/random` use the `--source random` option
 
 Example launch :
-- `python3 main.py --source webcam`
-- `python3 main.py --source random`
+- `python3 object_detection.py --source webcam`
+- `python3 object_detection.py --source random`
+
+# Key facepoint detection
+
+In the python folder :
+- Launch the `keypoint_detection.py` script file
+
+Example launch :
+- `python3 keypoint_detection.py --source webcam`
 
 
 ## Requirements
 - Python
 - OpenCV
-- Keras and its dependencies (theano/tensorflow)
+- Keras with tensorflow (only works on tensorflow, does NOT work on Theano)
 
 ## Contributors 
 Pascal Jauffret, Maxence Brochard
