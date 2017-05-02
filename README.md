@@ -28,10 +28,13 @@ In the `python` folder :
 # Style transfer an training of the CNNs
 Explore the notebook folder
 
+In order to execute the notebooks on training the CNN, you need to download the dataset [here](https://www.kaggle.com/c/facial-keypoints-detection)
+
 ## Requirements
 - Python
 - OpenCV
 - Keras with tensorflow (only works on tensorflow, does NOT work on Theano)
+
 
 ## Contributors 
 Pascal Jauffret, Maxence Brochard
