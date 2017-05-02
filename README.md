@@ -25,10 +25,9 @@ Example launch :
 In the `python` folder :
 - Launch the `keypoint_detection.py` script file
 
-# Style transfer an training of the CNNs
-Explore the notebook folder
-
-In order to execute the notebooks on training the CNN, you need to download the dataset [here](https://www.kaggle.com/c/facial-keypoints-detection)
+# Style transfer and training of the CNNs
+- Explore the notebook folder
+- In order to execute the notebooks on training the CNN, you need to download the dataset [here](https://www.kaggle.com/c/facial-keypoints-detection)
 
 ## Requirements
 - Python
