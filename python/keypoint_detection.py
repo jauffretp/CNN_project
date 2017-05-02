@@ -9,9 +9,8 @@ Created on Tue Nov 29 12:13:17 2016
 
 import sys, argparse,glob
 import numpy as np
-from keras.applications.resnet50 import ResNet50
 from keras.preprocessing import image
-from keras.applications.resnet50 import preprocess_input, decode_predictions
+from keras.applications.vgg19 import preprocess_input, decode_predictions
 from keras.models import model_from_json
 
 import cv2

@@ -9,9 +9,9 @@ Created on Tue Nov 29 12:13:17 2016
 
 import sys, argparse,glob
 import numpy as np
-from keras.applications.resnet50 import ResNet50
+from keras.applications.vgg19 import VGG19,preprocess_input, decode_predictions
+
 from keras.preprocessing import image
-from keras.applications.resnet50 import preprocess_input, decode_predictions
 from keras.models import model_from_json
 
 import cv2
@@ -34,8 +34,8 @@ def main(argv):
 	args = parser.parse_args()
 	source = args.source
 
-	model = ResNet50(weights='imagenet')
-
+	#model = ResNet50(weights='imagenet')
+	model = VGG19(weights='imagenet')
 
 	#face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
@@ -120,7 +120,7 @@ def  display_picture(array_picture_bgr, preds):
 	for (x,y,w,h) in faces:
 		cv2.rectangle(array_picture_bgr,(x,y),(x+w,y+h),(255,0,0),2)
 	'''
-	
+
 	cv2.imshow('CNN Detection',array_picture_bgr)
 
 
